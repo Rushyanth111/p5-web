@@ -1,6 +1,7 @@
 import React from "react";
 import { makeStyles, Paper, Typography } from "@material-ui/core";
 import { grey } from "@material-ui/core/colors";
+import QuestionCard from "../QuestionCard/QuestionCard";
 
 const useStyles = makeStyles((theme) => ({
   Paper: {
@@ -18,6 +19,7 @@ function CardHolder({ titleName }) {
   return (
     <Paper className={style.Paper} variant="outlined">
       <Typography variant="h6">{titleName}</Typography>
+      <QuestionCard question="Something Here" />
     </Paper>
   );
 }
