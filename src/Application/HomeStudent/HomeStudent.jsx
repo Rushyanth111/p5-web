@@ -4,23 +4,29 @@ import CardHolder from "../../Components/CardHolder";
 import { Toolbar, makeStyles, Box, Container } from "@material-ui/core";
 
 const useStyles = makeStyles({
-  Container: {
+  OuterContainer: {
+    display: "flex",
+  },
+  CardContainer: {
     display: "flex",
     flexDirection: "row",
     padding: "1rem",
+    margin: "auto",
+    flex: 1,
   },
 });
 
 function HomeStudent() {
   const styles = useStyles();
   return (
-    <Box>
+    <Container>
       <AppBar />
       <Toolbar />
-      <Container className={styles.Container}>
-        <CardHolder />
+      <Container className={styles.CardContainer}>
+        <CardHolder titleName="Questions Answered" />
+        <CardHolder titleName="Questions UnAnswered" />
       </Container>
-    </Box>
+    </Container>
   );
 }
 
